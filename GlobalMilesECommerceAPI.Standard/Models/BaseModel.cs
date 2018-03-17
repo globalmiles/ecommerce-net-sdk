@@ -1,5 +1,5 @@
 /*
- * GlobalMilesECommerceAPI.Standard
+ * GlobalMilesEcommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Newtonsoft.Json;
-namespace GlobalMilesECommerceAPI.Standard.Models
+namespace GlobalMilesEcommerceAPI.Standard.Models
 {
     public class BaseModel : INotifyPropertyChanged
     {

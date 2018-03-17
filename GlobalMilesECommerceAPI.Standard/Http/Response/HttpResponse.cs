@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace GlobalMilesECommerceAPI.Standard.Http.Response
+namespace GlobalMilesEcommerceAPI.Standard.Http.Response
 {
     public class HttpResponse
     {

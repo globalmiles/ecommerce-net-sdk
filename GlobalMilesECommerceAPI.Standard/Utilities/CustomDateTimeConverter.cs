@@ -1,6 +1,6 @@
 using Newtonsoft.Json.Converters;
 
-namespace GlobalMilesECommerceAPI.Standard.Utilities
+namespace GlobalMilesEcommerceAPI.Standard.Utilities
 {
     public class CustomDateTimeConverter : IsoDateTimeConverter
     {

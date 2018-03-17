@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-using GlobalMilesECommerceAPI.Standard.Controllers;
-using GlobalMilesECommerceAPI.Standard.Exceptions;
-using GlobalMilesECommerceAPI.Standard.Models;
+using GlobalMilesEcommerceAPI.Standard.Controllers;
+using GlobalMilesEcommerceAPI.Standard.Exceptions;
+using GlobalMilesEcommerceAPI.Standard.Models;
 
-namespace GlobalMilesECommerceAPI.Standard.Utilities
+namespace GlobalMilesEcommerceAPI.Standard.Utilities
 {
     public class AuthManager
     {

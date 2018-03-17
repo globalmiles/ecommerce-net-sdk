@@ -1,16 +1,16 @@
 /*
- * GlobalMilesECommerceAPI.Standard
+ * GlobalMilesEcommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
 using System;
-using GlobalMilesECommerceAPI.Standard.Controllers;
-using GlobalMilesECommerceAPI.Standard.Http.Client;
-using GlobalMilesECommerceAPI.Standard.Utilities;
+using GlobalMilesEcommerceAPI.Standard.Controllers;
+using GlobalMilesEcommerceAPI.Standard.Http.Client;
+using GlobalMilesEcommerceAPI.Standard.Utilities;
 
-namespace GlobalMilesECommerceAPI.Standard
+namespace GlobalMilesEcommerceAPI.Standard
 {
-    public partial class GlobalMilesECommerceAPIClient
+    public partial class GlobalMilesEcommerceAPIClient
     {
 
         /// <summary>
@@ -25,13 +25,13 @@ namespace GlobalMilesECommerceAPI.Standard
         }
 
         /// <summary>
-        /// Singleton access to Transaction controller
+        /// Singleton access to EarnMilesPoints controller
         /// </summary>
-        public TransactionController Transaction
+        public EarnMilesPointsController EarnMilesPoints
         {
             get
             {
-                return TransactionController.Instance;
+                return EarnMilesPointsController.Instance;
             }
         }
 
@@ -93,12 +93,12 @@ namespace GlobalMilesECommerceAPI.Standard
         /// <summary>
         /// Default constructor
         /// </summary>
-        public GlobalMilesECommerceAPIClient() { }
+        public GlobalMilesEcommerceAPIClient() { }
 
         /// <summary>
         /// Client initialization constructor
         /// </summary>
-        public GlobalMilesECommerceAPIClient(string oAuthClientId, string oAuthClientSecret)
+        public GlobalMilesEcommerceAPIClient(string oAuthClientId, string oAuthClientSecret)
         {
             Configuration.OAuthClientId = oAuthClientId;
             Configuration.OAuthClientSecret = oAuthClientSecret;

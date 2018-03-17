@@ -21,18 +21,18 @@ using GlobalMilesEcommerceAPI.Standard.Exceptions;
 
 namespace GlobalMilesEcommerceAPI.Standard.Controllers
 {
-    public partial class ReturnController: BaseController
+    public partial class EarnMilesPointsController: BaseController
     {
         #region Singleton Pattern
 
         //private static variables for the singleton pattern
         private static object syncObject = new object();
-        private static ReturnController instance = null;
+        private static EarnMilesPointsController instance = null;
 
         /// <summary>
         /// Singleton pattern implementation
         /// </summary>
-        internal static ReturnController Instance
+        internal static EarnMilesPointsController Instance
         {
             get
             {
@@ -40,7 +40,7 @@ namespace GlobalMilesEcommerceAPI.Standard.Controllers
                 {
                     if (null == instance)
                     {
-                        instance = new ReturnController();
+                        instance = new EarnMilesPointsController();
                     }
                 }
                 return instance;
@@ -50,37 +50,37 @@ namespace GlobalMilesEcommerceAPI.Standard.Controllers
         #endregion Singleton Pattern
 
         /// <summary>
-        /// This endpoint allows to start a return for a specific order.
+        /// This endpoint allows to create an order for earn a miles / points. It may also include discounts and payments.
         /// </summary>
         /// <param name="accept">Required parameter: It advertises which content type is able to understand.</param>
         /// <param name="contentType">Required parameter: It tells the client what the content type of the returned.</param>
         /// <param name="authorization">Required parameter: It includes OAuth2 token.</param>
         /// <param name="body">Required parameter: The body of the request.</param>
-        /// <return>Returns the Models.StartReturnResponse response from the API call</return>
-        public Models.StartReturnResponse CreateStartReturn(
+        /// <return>Returns the Models.OrderResponse response from the API call</return>
+        public Models.OrderResponse CreateOrderInfo(
                 string accept,
                 string contentType,
                 string authorization,
-                Models.StartReturnRequest body)
+                Models.OrderRequest body)
         {
-            Task<Models.StartReturnResponse> t = CreateStartReturnAsync(accept, contentType, authorization, body);
+            Task<Models.OrderResponse> t = CreateOrderInfoAsync(accept, contentType, authorization, body);
             APIHelper.RunTaskSynchronously(t);
             return t.Result;
         }
 
         /// <summary>
-        /// This endpoint allows to start a return for a specific order.
+        /// This endpoint allows to create an order for earn a miles / points. It may also include discounts and payments.
         /// </summary>
         /// <param name="accept">Required parameter: It advertises which content type is able to understand.</param>
         /// <param name="contentType">Required parameter: It tells the client what the content type of the returned.</param>
         /// <param name="authorization">Required parameter: It includes OAuth2 token.</param>
         /// <param name="body">Required parameter: The body of the request.</param>
-        /// <return>Returns the Models.StartReturnResponse response from the API call</return>
-        public async Task<Models.StartReturnResponse> CreateStartReturnAsync(
+        /// <return>Returns the Models.OrderResponse response from the API call</return>
+        public async Task<Models.OrderResponse> CreateOrderInfoAsync(
                 string accept,
                 string contentType,
                 string authorization,
-                Models.StartReturnRequest body)
+                Models.OrderRequest body)
         {
             //Check if authentication token is set
             AuthManager.Instance.CheckAuthorization();
@@ -89,7 +89,7 @@ namespace GlobalMilesEcommerceAPI.Standard.Controllers
 
             //prepare query string for API call
             StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-            _queryBuilder.Append("/v2/ecommerce/returns");
+            _queryBuilder.Append("/v2/ecommerce/orders");
 
 
             //validate and preprocess url
@@ -121,7 +121,7 @@ namespace GlobalMilesEcommerceAPI.Standard.Controllers
 
             try
             {
-                return APIHelper.JsonDeserialize<Models.StartReturnResponse>(_response.Body);
+                return APIHelper.JsonDeserialize<Models.OrderResponse>(_response.Body);
             }
             catch (Exception _ex)
             {
@@ -130,37 +130,37 @@ namespace GlobalMilesEcommerceAPI.Standard.Controllers
         }
 
         /// <summary>
-        /// This endpoint allows to complete a return.
+        /// This endpoint allows to get available amount of money, based on miles / points of user and their discounts which is based on cart or items.
         /// </summary>
         /// <param name="accept">Required parameter: It advertises which content type is able to understand.</param>
         /// <param name="contentType">Required parameter: It tells the client what the content type of the returned.</param>
         /// <param name="authorization">Required parameter: It includes OAuth2 token.</param>
         /// <param name="body">Required parameter: The body of the request.</param>
-        /// <return>Returns the Models.Response response from the API call</return>
-        public Models.Response UpdateCompleteReturn(
+        /// <return>Returns the Models.CartResponse response from the API call</return>
+        public Models.CartResponse CreateCartInfo(
                 string accept,
                 string contentType,
                 string authorization,
-                Models.CompleteReturnRequest body)
+                Models.CartRequest body)
         {
-            Task<Models.Response> t = UpdateCompleteReturnAsync(accept, contentType, authorization, body);
+            Task<Models.CartResponse> t = CreateCartInfoAsync(accept, contentType, authorization, body);
             APIHelper.RunTaskSynchronously(t);
             return t.Result;
         }
 
         /// <summary>
-        /// This endpoint allows to complete a return.
+        /// This endpoint allows to get available amount of money, based on miles / points of user and their discounts which is based on cart or items.
         /// </summary>
         /// <param name="accept">Required parameter: It advertises which content type is able to understand.</param>
         /// <param name="contentType">Required parameter: It tells the client what the content type of the returned.</param>
         /// <param name="authorization">Required parameter: It includes OAuth2 token.</param>
         /// <param name="body">Required parameter: The body of the request.</param>
-        /// <return>Returns the Models.Response response from the API call</return>
-        public async Task<Models.Response> UpdateCompleteReturnAsync(
+        /// <return>Returns the Models.CartResponse response from the API call</return>
+        public async Task<Models.CartResponse> CreateCartInfoAsync(
                 string accept,
                 string contentType,
                 string authorization,
-                Models.CompleteReturnRequest body)
+                Models.CartRequest body)
         {
             //Check if authentication token is set
             AuthManager.Instance.CheckAuthorization();
@@ -169,7 +169,7 @@ namespace GlobalMilesEcommerceAPI.Standard.Controllers
 
             //prepare query string for API call
             StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-            _queryBuilder.Append("/v2/ecommerce/returns");
+            _queryBuilder.Append("/v2/ecommerce/carts");
 
 
             //validate and preprocess url
@@ -191,7 +191,7 @@ namespace GlobalMilesEcommerceAPI.Standard.Controllers
             var _body = APIHelper.JsonSerialize(body);
 
             //prepare the API call request to fetch the response
-            HttpRequest _request = ClientInstance.PutBody(_queryUrl, _headers, _body);
+            HttpRequest _request = ClientInstance.PostBody(_queryUrl, _headers, _body);
 
             //invoke request and get response
             HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request).ConfigureAwait(false);
@@ -201,87 +201,7 @@ namespace GlobalMilesEcommerceAPI.Standard.Controllers
 
             try
             {
-                return APIHelper.JsonDeserialize<Models.Response>(_response.Body);
-            }
-            catch (Exception _ex)
-            {
-                throw new APIException("Failed to parse the response: " + _ex.Message, _context);
-            }
-        }
-
-        /// <summary>
-        /// This endpoint allows to cancel a return.
-        /// </summary>
-        /// <param name="accept">Required parameter: It advertises which content type is able to understand.</param>
-        /// <param name="contentType">Required parameter: It tells the client what the content type of the returned.</param>
-        /// <param name="authorization">Required parameter: It includes OAuth2 token.</param>
-        /// <param name="body">Required parameter: The body of the request.</param>
-        /// <return>Returns the Models.Response response from the API call</return>
-        public Models.Response DeleteCancelReturn(
-                string accept,
-                string contentType,
-                string authorization,
-                Models.CancelReturnRequest body)
-        {
-            Task<Models.Response> t = DeleteCancelReturnAsync(accept, contentType, authorization, body);
-            APIHelper.RunTaskSynchronously(t);
-            return t.Result;
-        }
-
-        /// <summary>
-        /// This endpoint allows to cancel a return.
-        /// </summary>
-        /// <param name="accept">Required parameter: It advertises which content type is able to understand.</param>
-        /// <param name="contentType">Required parameter: It tells the client what the content type of the returned.</param>
-        /// <param name="authorization">Required parameter: It includes OAuth2 token.</param>
-        /// <param name="body">Required parameter: The body of the request.</param>
-        /// <return>Returns the Models.Response response from the API call</return>
-        public async Task<Models.Response> DeleteCancelReturnAsync(
-                string accept,
-                string contentType,
-                string authorization,
-                Models.CancelReturnRequest body)
-        {
-            //Check if authentication token is set
-            AuthManager.Instance.CheckAuthorization();
-            //the base uri for api requests
-            string _baseUri = Configuration.GetBaseURI();
-
-            //prepare query string for API call
-            StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-            _queryBuilder.Append("/v2/ecommerce/returns");
-
-
-            //validate and preprocess url
-            string _queryUrl = APIHelper.CleanUrl(_queryBuilder);
-
-            //append request with appropriate headers and parameters
-            var _headers = new Dictionary<string,string>()
-            {
-                { "user-agent", "APIMATIC 2.0" },
-                { "accept", "application/json" },
-                { "content-type", "application/json; charset=utf-8" },
-                { "Accept", accept },
-                { "Content-Type", contentType },
-                { "Authorization", authorization }
-            };
-            _headers.Add("Authorization", string.Format("Bearer {0}", Configuration.OAuthToken.AccessToken));
-
-            //append body params
-            var _body = APIHelper.JsonSerialize(body);
-
-            //prepare the API call request to fetch the response
-            HttpRequest _request = ClientInstance.DeleteBody(_queryUrl, _headers, _body);
-
-            //invoke request and get response
-            HttpStringResponse _response = (HttpStringResponse) await ClientInstance.ExecuteAsStringAsync(_request).ConfigureAwait(false);
-            HttpContext _context = new HttpContext(_request,_response);
-            //handle errors defined at the API level
-            base.ValidateResponse(_response, _context);
-
-            try
-            {
-                return APIHelper.JsonDeserialize<Models.Response>(_response.Body);
+                return APIHelper.JsonDeserialize<Models.CartResponse>(_response.Body);
             }
             catch (Exception _ex)
             {

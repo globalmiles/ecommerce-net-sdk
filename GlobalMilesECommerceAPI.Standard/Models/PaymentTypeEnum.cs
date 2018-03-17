@@ -1,5 +1,5 @@
 /*
- * GlobalMilesECommerceAPI.Standard
+ * GlobalMilesEcommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -8,10 +8,10 @@ using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using GlobalMilesECommerceAPI.Standard;
-using GlobalMilesECommerceAPI.Standard.Utilities;
+using GlobalMilesEcommerceAPI.Standard;
+using GlobalMilesEcommerceAPI.Standard.Utilities;
 
-namespace GlobalMilesECommerceAPI.Standard.Models
+namespace GlobalMilesEcommerceAPI.Standard.Models
 {
     [JsonConverter(typeof(StringValuedEnumConverter))]
     public enum PaymentTypeEnum
@@ -23,7 +23,7 @@ namespace GlobalMilesECommerceAPI.Standard.Models
         DIGITAL_WALLET, //Digital Wallet
         MOBILE_PAYMENT, //Mobile Payment
         GIFT_CARD, //Gitf Card
-        POINT_PAYMENT, //Point Payment provided by Global Miles
+        POINT_PAYMENT, //Pay with miles / points provided by Global Miles
         OTHER, //Other
     }
 

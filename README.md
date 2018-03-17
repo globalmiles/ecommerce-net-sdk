@@ -1,6 +1,6 @@
 # Getting started
 
-API for E-commerce Partners. This document includes Cart, Discount, Payment, Order and Return related endpoints provided by Global Miles.
+API for Ecommerce Partners. This document includes Cart, Discount, Payment, Order and Return related endpoints provided by Global Miles.
 
 ## How to Build
 
@@ -9,50 +9,50 @@ is enabled, these dependencies will be installed automatically. Therefore,
 you will need internet access for build.
 
 "This library requires Visual Studio 2017 for compilation."
-1. Open the solution (GlobalMilesECommerceAPI.sln) file.
+1. Open the solution (GlobalMilesEcommerceAPI.sln) file.
 2. Invoke the build process using `Ctrl+Shift+B` shortcut key or using the `Build` menu as shown below.
 
-![Building SDK using Visual Studio](https://apidocs.io/illustration/cs?step=buildSDK&workspaceFolder=Global%20Miles%20ECommerce%20API-CSharp&workspaceName=GlobalMilesECommerceAPI&projectName=GlobalMilesECommerceAPI.Standard)
+![Building SDK using Visual Studio](https://apidocs.io/illustration/cs?step=buildSDK&workspaceFolder=Global%20Miles%20Ecommerce%20API-CSharp&workspaceName=GlobalMilesEcommerceAPI&projectName=GlobalMilesEcommerceAPI.Standard)
 
 ## How to Use
 
 The build process generates a portable class library, which can be used like a normal class library. The generated library is compatible with Windows Forms, Windows RT, Windows Phone 8,
 Silverlight 5, Xamarin iOS, Xamarin Android and Mono. More information on how to use can be found at the [MSDN Portable Class Libraries documentation](http://msdn.microsoft.com/en-us/library/vstudio/gg597391%28v=vs.100%29.aspx).
 
-The following section explains how to use the GlobalMilesECommerceAPI library in a new console project.
+The following section explains how to use the GlobalMilesEcommerceAPI library in a new console project.
 
 ### 1. Starting a new project
 
 For starting a new project, right click on the current solution from the *solution explorer* and choose  ``` Add -> New Project ```.
 
-![Add a new project in the existing solution using Visual Studio](https://apidocs.io/illustration/cs?step=addProject&workspaceFolder=Global%20Miles%20ECommerce%20API-CSharp&workspaceName=GlobalMilesECommerceAPI&projectName=GlobalMilesECommerceAPI.Standard)
+![Add a new project in the existing solution using Visual Studio](https://apidocs.io/illustration/cs?step=addProject&workspaceFolder=Global%20Miles%20Ecommerce%20API-CSharp&workspaceName=GlobalMilesEcommerceAPI&projectName=GlobalMilesEcommerceAPI.Standard)
 
 Next, choose "Console Application", provide a ``` TestConsoleProject ``` as the project name and click ``` OK ```.
 
-![Create a new console project using Visual Studio](https://apidocs.io/illustration/cs?step=createProject&workspaceFolder=Global%20Miles%20ECommerce%20API-CSharp&workspaceName=GlobalMilesECommerceAPI&projectName=GlobalMilesECommerceAPI.Standard)
+![Create a new console project using Visual Studio](https://apidocs.io/illustration/cs?step=createProject&workspaceFolder=Global%20Miles%20Ecommerce%20API-CSharp&workspaceName=GlobalMilesEcommerceAPI&projectName=GlobalMilesEcommerceAPI.Standard)
 
 ### 2. Set as startup project
 
 The new console project is the entry point for the eventual execution. This requires us to set the ``` TestConsoleProject ``` as the start-up project. To do this, right-click on the  ``` TestConsoleProject ``` and choose  ``` Set as StartUp Project ``` form the context menu.
 
-![Set the new cosole project as the start up project](https://apidocs.io/illustration/cs?step=setStartup&workspaceFolder=Global%20Miles%20ECommerce%20API-CSharp&workspaceName=GlobalMilesECommerceAPI&projectName=GlobalMilesECommerceAPI.Standard)
+![Set the new cosole project as the start up project](https://apidocs.io/illustration/cs?step=setStartup&workspaceFolder=Global%20Miles%20Ecommerce%20API-CSharp&workspaceName=GlobalMilesEcommerceAPI&projectName=GlobalMilesEcommerceAPI.Standard)
 
 ### 3. Add reference of the library project
 
-In order to use the GlobalMilesECommerceAPI library in the new project, first we must add a projet reference to the ``` TestConsoleProject ```. First, right click on the ``` References ``` node in the *solution explorer* and click ``` Add Reference... ```.
+In order to use the GlobalMilesEcommerceAPI library in the new project, first we must add a projet reference to the ``` TestConsoleProject ```. First, right click on the ``` References ``` node in the *solution explorer* and click ``` Add Reference... ```.
 
-![Open references of the TestConsoleProject](https://apidocs.io/illustration/cs?step=addReference&workspaceFolder=Global%20Miles%20ECommerce%20API-CSharp&workspaceName=GlobalMilesECommerceAPI&projectName=GlobalMilesECommerceAPI.Standard)
+![Open references of the TestConsoleProject](https://apidocs.io/illustration/cs?step=addReference&workspaceFolder=Global%20Miles%20Ecommerce%20API-CSharp&workspaceName=GlobalMilesEcommerceAPI&projectName=GlobalMilesEcommerceAPI.Standard)
 
-Next, a window will be displayed where we must set the ``` checkbox ``` on ``` GlobalMilesECommerceAPI.Standard ``` and click ``` OK ```. By doing this, we have added a reference of the ```GlobalMilesECommerceAPI.Standard``` project into the new ``` TestConsoleProject ```.
+Next, a window will be displayed where we must set the ``` checkbox ``` on ``` GlobalMilesEcommerceAPI.Standard ``` and click ``` OK ```. By doing this, we have added a reference of the ```GlobalMilesEcommerceAPI.Standard``` project into the new ``` TestConsoleProject ```.
 
-![Add a reference to the TestConsoleProject](https://apidocs.io/illustration/cs?step=createReference&workspaceFolder=Global%20Miles%20ECommerce%20API-CSharp&workspaceName=GlobalMilesECommerceAPI&projectName=GlobalMilesECommerceAPI.Standard)
+![Add a reference to the TestConsoleProject](https://apidocs.io/illustration/cs?step=createReference&workspaceFolder=Global%20Miles%20Ecommerce%20API-CSharp&workspaceName=GlobalMilesEcommerceAPI&projectName=GlobalMilesEcommerceAPI.Standard)
 
 ### 4. Write sample code
 
 Once the ``` TestConsoleProject ``` is created, a file named ``` Program.cs ``` will be visible in the *solution explorer* with an empty ``` Main ``` method. This is the entry point for the execution of the entire solution.
 Here, you can add code to initialize the client library and acquire the instance of a *Controller* class. Sample code to initialize the client library and using controller methods is given in the subsequent sections.
 
-![Add a reference to the TestConsoleProject](https://apidocs.io/illustration/cs?step=addCode&workspaceFolder=Global%20Miles%20ECommerce%20API-CSharp&workspaceName=GlobalMilesECommerceAPI&projectName=GlobalMilesECommerceAPI.Standard)
+![Add a reference to the TestConsoleProject](https://apidocs.io/illustration/cs?step=addCode&workspaceFolder=Global%20Miles%20Ecommerce%20API-CSharp&workspaceName=GlobalMilesEcommerceAPI&projectName=GlobalMilesEcommerceAPI.Standard)
 
 ## How to Test
 
@@ -80,7 +80,7 @@ API client can be initialized as following.
 string oAuthClientId = "oAuthClientId"; // OAuth 2 Client ID
 string oAuthClientSecret = "oAuthClientSecret"; // OAuth 2 Client Secret
 
-GlobalMilesECommerceAPIClient client = new GlobalMilesECommerceAPIClient(oAuthClientId, oAuthClientSecret);
+GlobalMilesEcommerceAPIClient client = new GlobalMilesEcommerceAPIClient(oAuthClientId, oAuthClientSecret);
 ```
 
 
@@ -124,15 +124,15 @@ SaveTokenToDatabase(Configuration.OAuthToken);
 To authorize a client from a stored access token, just set the access token after creating the client:
 
 ```csharp
-client = GlobalMilesECommerceAPIClient();
+client = GlobalMilesEcommerceAPIClient();
 Configuration.UpdateAccessToken(LoadTokenFromDatabase());
 ```
 
 ### Complete example
 ```csharp
-using GlobalMilesECommerceAPI.Standard;
-using GlobalMilesECommerceAPI.Standard.Models;
-using GlobalMilesECommerceAPI.Standard.Exceptions;
+using GlobalMilesEcommerceAPI.Standard;
+using GlobalMilesEcommerceAPI.Standard.Models;
+using GlobalMilesEcommerceAPI.Standard.Exceptions;
 using System.Collections.Generic;
 
 namespace OAuthTestApplication
@@ -145,7 +145,7 @@ namespace OAuthTestApplication
            string oAuthClientId = "oAuthClientId"; // OAuth 2 Client ID
            string oAuthClientSecret = "oAuthClientSecret"; // OAuth 2 Client Secret
            
-            GlobalMilesECommerceAPIClient client = new GlobalMilesECommerceAPIClient(oAuthClientId, oAuthClientSecret);
+            GlobalMilesEcommerceAPIClient client = new GlobalMilesEcommerceAPIClient(oAuthClientId, oAuthClientSecret);
 
             //callback for storing token for reuse when token is updated
             Configuration.OAuthTokenUpdateCallback = SaveTokenToDatabase;
@@ -195,11 +195,11 @@ namespace OAuthTestApplication
 ## <a name="list_of_controllers"></a>List of Controllers
 
 * [PayWithMilesPointsController](#pay_with_miles_points_controller)
-* [TransactionController](#transaction_controller)
+* [EarnMilesPointsController](#earn_miles_points_controller)
 * [AuthenticationController](#authentication_controller)
 * [ReturnController](#return_controller)
 
-## <a name="pay_with_miles_points_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesECommerceAPI.Standard.Controllers.PayWithMilesPointsController") PayWithMilesPointsController
+## <a name="pay_with_miles_points_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController") PayWithMilesPointsController
 
 ### Get singleton instance
 
@@ -209,7 +209,7 @@ The singleton instance of the ``` PayWithMilesPointsController ``` class can be 
 PayWithMilesPointsController payWithMilesPoints = client.PayWithMilesPoints;
 ```
 
-### <a name="list_point_payments"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.PayWithMilesPointsController.ListPointPayments") ListPointPayments
+### <a name="list_point_payments"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController.ListPointPayments") ListPointPayments
 
 > This endpoint allows to get list of payments. In order to get detailed payment history and reconciliation you can use this API.
 
@@ -244,17 +244,17 @@ Task<Models.ListPointPaymentResponse> ListPointPayments(
 string accept = "application/json";
 string contentType = "application/json";
 string authorization = "Authorization";
-string storeCode = "Store Code";
-string filterByCreatedAt = "Filter By Created_At";
-string filterByStatus = "Filter By Status";
-string sortBy = "Sort By";
+string storeCode = "StoreCode";
+string filterByCreatedAt = "FilterByCreatedAt";
+string filterByStatus = "FilterByStatus";
+string sortBy = "SortBy";
 
 Models.ListPointPaymentResponse result = await payWithMilesPoints.ListPointPayments(accept, contentType, authorization, storeCode, filterByCreatedAt, filterByStatus, sortBy);
 
 ```
 
 
-### <a name="create_refund_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.PayWithMilesPointsController.CreateRefundPointPayment") CreateRefundPointPayment
+### <a name="create_refund_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController.CreateRefundPointPayment") CreateRefundPointPayment
 
 > This endpoint allows to refund a payment.
 
@@ -290,7 +290,7 @@ Models.Response result = await payWithMilesPoints.CreateRefundPointPayment(accep
 ```
 
 
-### <a name="delete_cancel_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.PayWithMilesPointsController.DeleteCancelPointPayment") DeleteCancelPointPayment
+### <a name="delete_cancel_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController.DeleteCancelPointPayment") DeleteCancelPointPayment
 
 > This endpoint allows to cancel a payment.
 
@@ -326,7 +326,7 @@ Models.Response result = await payWithMilesPoints.DeleteCancelPointPayment(accep
 ```
 
 
-### <a name="update_complete_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.PayWithMilesPointsController.UpdateCompletePointPayment") UpdateCompletePointPayment
+### <a name="update_complete_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController.UpdateCompletePointPayment") UpdateCompletePointPayment
 
 > This endpoint allows to complete a payment.
 
@@ -362,7 +362,7 @@ Models.Response result = await payWithMilesPoints.UpdateCompletePointPayment(acc
 ```
 
 
-### <a name="create_start_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.PayWithMilesPointsController.CreateStartPointPayment") CreateStartPointPayment
+### <a name="create_start_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController.CreateStartPointPayment") CreateStartPointPayment
 
 > After successful authentication and retrieving needed token,this endpoint allows to start a payment transaction. To be able to complete whole sale process successfully  also check "Complete Point Payment endpoint" please.
 
@@ -400,17 +400,17 @@ Models.StartPointPaymentResponse result = await payWithMilesPoints.CreateStartPo
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="transaction_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesECommerceAPI.Standard.Controllers.TransactionController") TransactionController
+## <a name="earn_miles_points_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesEcommerceAPI.Standard.Controllers.EarnMilesPointsController") EarnMilesPointsController
 
 ### Get singleton instance
 
-The singleton instance of the ``` TransactionController ``` class can be accessed from the API Client.
+The singleton instance of the ``` EarnMilesPointsController ``` class can be accessed from the API Client.
 
 ```csharp
-TransactionController transaction = client.Transaction;
+EarnMilesPointsController earnMilesPoints = client.EarnMilesPoints;
 ```
 
-### <a name="create_order_info"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.TransactionController.CreateOrderInfo") CreateOrderInfo
+### <a name="create_order_info"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.EarnMilesPointsController.CreateOrderInfo") CreateOrderInfo
 
 > This endpoint allows to create an order for earn a miles / points. It may also include discounts and payments.
 
@@ -441,12 +441,12 @@ string contentType = "application/json";
 string authorization = "Authorization";
 var body = new Models.OrderRequest();
 
-Models.OrderResponse result = await transaction.CreateOrderInfo(accept, contentType, authorization, body);
+Models.OrderResponse result = await earnMilesPoints.CreateOrderInfo(accept, contentType, authorization, body);
 
 ```
 
 
-### <a name="create_cart_info"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.TransactionController.CreateCartInfo") CreateCartInfo
+### <a name="create_cart_info"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.EarnMilesPointsController.CreateCartInfo") CreateCartInfo
 
 > This endpoint allows to get available amount of money, based on miles / points of user and their discounts which is based on cart or items.
 
@@ -477,14 +477,14 @@ string contentType = "application/json";
 string authorization = "Bearer {{auth_token}}";
 var body = new Models.CartRequest();
 
-Models.CartResponse result = await transaction.CreateCartInfo(accept, contentType, authorization, body);
+Models.CartResponse result = await earnMilesPoints.CreateCartInfo(accept, contentType, authorization, body);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="authentication_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesECommerceAPI.Standard.Controllers.AuthenticationController") AuthenticationController
+## <a name="authentication_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesEcommerceAPI.Standard.Controllers.AuthenticationController") AuthenticationController
 
 ### Get singleton instance
 
@@ -494,7 +494,7 @@ The singleton instance of the ``` AuthenticationController ``` class can be acce
 AuthenticationController authentication = client.Authentication;
 ```
 
-### <a name="create_authentication"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.AuthenticationController.CreateAuthentication") CreateAuthentication
+### <a name="create_authentication"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.AuthenticationController.CreateAuthentication") CreateAuthentication
 
 > *Tags:*  ``` Skips Authentication ``` 
 
@@ -529,7 +529,7 @@ Models.OAuthResponse result = await authentication.CreateAuthentication(accept, 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="return_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesECommerceAPI.Standard.Controllers.ReturnController") ReturnController
+## <a name="return_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesEcommerceAPI.Standard.Controllers.ReturnController") ReturnController
 
 ### Get singleton instance
 
@@ -539,7 +539,7 @@ The singleton instance of the ``` ReturnController ``` class can be accessed fro
 ReturnController mreturn = client.Return;
 ```
 
-### <a name="create_start_return"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.ReturnController.CreateStartReturn") CreateStartReturn
+### <a name="create_start_return"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.ReturnController.CreateStartReturn") CreateStartReturn
 
 > This endpoint allows to start a return for a specific order.
 
@@ -575,7 +575,7 @@ Models.StartReturnResponse result = await mreturn.CreateStartReturn(accept, cont
 ```
 
 
-### <a name="update_complete_return"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.ReturnController.UpdateCompleteReturn") UpdateCompleteReturn
+### <a name="update_complete_return"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.ReturnController.UpdateCompleteReturn") UpdateCompleteReturn
 
 > This endpoint allows to complete a return.
 
@@ -611,7 +611,7 @@ Models.Response result = await mreturn.UpdateCompleteReturn(accept, contentType,
 ```
 
 
-### <a name="delete_cancel_return"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesECommerceAPI.Standard.Controllers.ReturnController.DeleteCancelReturn") DeleteCancelReturn
+### <a name="delete_cancel_return"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.ReturnController.DeleteCancelReturn") DeleteCancelReturn
 
 > This endpoint allows to cancel a return.
 
