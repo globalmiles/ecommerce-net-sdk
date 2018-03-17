@@ -1,5 +1,5 @@
 /*
- * GlobalMilesECommerceAPI.Standard
+ * GlobalMilesEcommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -8,10 +8,10 @@ using System.Collections.Generic;
 using System.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using GlobalMilesECommerceAPI.Standard;
-using GlobalMilesECommerceAPI.Standard.Utilities;
+using GlobalMilesEcommerceAPI.Standard;
+using GlobalMilesEcommerceAPI.Standard.Utilities;
 
-namespace GlobalMilesECommerceAPI.Standard.Models
+namespace GlobalMilesEcommerceAPI.Standard.Models
 {
     public abstract class JsonCreationConverter<T> : JsonConverter
     {

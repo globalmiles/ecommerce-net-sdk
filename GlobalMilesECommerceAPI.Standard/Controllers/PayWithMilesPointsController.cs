@@ -1,5 +1,5 @@
 /*
- * GlobalMilesECommerceAPI.Standard
+ * GlobalMilesEcommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -12,14 +12,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Converters;
-using GlobalMilesECommerceAPI.Standard;
-using GlobalMilesECommerceAPI.Standard.Utilities;
-using GlobalMilesECommerceAPI.Standard.Http.Request;
-using GlobalMilesECommerceAPI.Standard.Http.Response;
-using GlobalMilesECommerceAPI.Standard.Http.Client;
-using GlobalMilesECommerceAPI.Standard.Exceptions;
+using GlobalMilesEcommerceAPI.Standard;
+using GlobalMilesEcommerceAPI.Standard.Utilities;
+using GlobalMilesEcommerceAPI.Standard.Http.Request;
+using GlobalMilesEcommerceAPI.Standard.Http.Response;
+using GlobalMilesEcommerceAPI.Standard.Http.Client;
+using GlobalMilesEcommerceAPI.Standard.Exceptions;
 
-namespace GlobalMilesECommerceAPI.Standard.Controllers
+namespace GlobalMilesEcommerceAPI.Standard.Controllers
 {
     public partial class PayWithMilesPointsController: BaseController
     {
@@ -106,10 +106,10 @@ namespace GlobalMilesECommerceAPI.Standard.Controllers
             //process optional query parameters
             APIHelper.AppendUrlWithQueryParameters(_queryBuilder, new Dictionary<string, object>()
             {
-                { "Store Code", storeCode },
-                { "Filter By Created_At", filterByCreatedAt },
-                { "Filter By Status", filterByStatus },
-                { "Sort By", sortBy }
+                { "StoreCode", storeCode },
+                { "FilterByCreatedAt", filterByCreatedAt },
+                { "FilterByStatus", filterByStatus },
+                { "SortBy", sortBy }
             },ArrayDeserializationFormat,ParameterSeparator);
 
 

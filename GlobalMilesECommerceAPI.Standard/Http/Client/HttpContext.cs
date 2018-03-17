@@ -1,7 +1,7 @@
-using GlobalMilesECommerceAPI.Standard.Http.Request;
-using GlobalMilesECommerceAPI.Standard.Http.Response;
+using GlobalMilesEcommerceAPI.Standard.Http.Request;
+using GlobalMilesEcommerceAPI.Standard.Http.Response;
 
-namespace GlobalMilesECommerceAPI.Standard.Http.Client
+namespace GlobalMilesEcommerceAPI.Standard.Http.Client
 {
     /// <summary>
     /// Represents the contextual information of HTTP request and response

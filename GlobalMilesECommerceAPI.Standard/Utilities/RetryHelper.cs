@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace GlobalMilesECommerceAPI.Standard.Utilities
+namespace GlobalMilesEcommerceAPI.Standard.Utilities
 {
     public static class RetryHelper
     {

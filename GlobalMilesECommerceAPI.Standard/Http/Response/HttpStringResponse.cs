@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace GlobalMilesECommerceAPI.Standard.Http.Response
+namespace GlobalMilesEcommerceAPI.Standard.Http.Response
 {
     public class HttpStringResponse : HttpResponse
     {

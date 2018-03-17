@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Text;
-using GlobalMilesECommerceAPI.Standard.Utilities;
-using GlobalMilesECommerceAPI.Standard.Models;
-namespace GlobalMilesECommerceAPI.Standard
+using GlobalMilesEcommerceAPI.Standard.Utilities;
+using GlobalMilesEcommerceAPI.Standard.Models;
+namespace GlobalMilesEcommerceAPI.Standard
 {
     public partial class Configuration
     {
