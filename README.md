@@ -194,31 +194,28 @@ namespace OAuthTestApplication
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [PayWithMilesPointsController](#pay_with_miles_points_controller)
-* [EarnMilesPointsController](#earn_miles_points_controller)
+* [PayWithMilesController](#pay_with_miles_controller)
+* [EarnMilesController](#earn_miles_controller)
 * [AuthenticationController](#authentication_controller)
 * [ReturnController](#return_controller)
 
-## <a name="pay_with_miles_points_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController") PayWithMilesPointsController
+## <a name="pay_with_miles_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesController") PayWithMilesController
 
 ### Get singleton instance
 
-The singleton instance of the ``` PayWithMilesPointsController ``` class can be accessed from the API Client.
+The singleton instance of the ``` PayWithMilesController ``` class can be accessed from the API Client.
 
 ```csharp
-PayWithMilesPointsController payWithMilesPoints = client.PayWithMilesPoints;
+PayWithMilesController payWithMiles = client.PayWithMiles;
 ```
 
-### <a name="list_point_payments"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController.ListPointPayments") ListPointPayments
+### <a name="list_mile_payments"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesController.ListMilePayments") ListMilePayments
 
-> This endpoint allows to get list of payments. In order to get detailed payment history and reconciliation you can use this API.
+> This endpoint allows to get list of payments. In order to get detailed payment history and reconciliation you can use this endpoint.
 
 
 ```csharp
-Task<Models.ListPointPaymentResponse> ListPointPayments(
-        string accept,
-        string contentType,
-        string authorization,
+Task<Models.ListMilePaymentResponse> ListMilePayments(
         string storeCode,
         string filterByCreatedAt,
         string filterByStatus = null,
@@ -229,9 +226,6 @@ Task<Models.ListPointPaymentResponse> ListPointPayments(
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| authorization |  ``` Required ```  | It includes OAuth2 token. |
 | storeCode |  ``` Required ```  | An identifier for online store. |
 | filterByCreatedAt |  ``` Required ```  | Filter for created_at field. It is accepted a valid date range value. The format is YYYY-MM-DD...YYYY-MM-DD. |
 | filterByStatus |  ``` Optional ```  | Filter for status field. It is accepted a valid status value of payment. |
@@ -241,243 +235,180 @@ Task<Models.ListPointPaymentResponse> ListPointPayments(
 #### Example Usage
 
 ```csharp
-string accept = "application/json";
-string contentType = "application/json";
-string authorization = "Authorization";
 string storeCode = "StoreCode";
 string filterByCreatedAt = "FilterByCreatedAt";
 string filterByStatus = "FilterByStatus";
 string sortBy = "SortBy";
 
-Models.ListPointPaymentResponse result = await payWithMilesPoints.ListPointPayments(accept, contentType, authorization, storeCode, filterByCreatedAt, filterByStatus, sortBy);
+Models.ListMilePaymentResponse result = await payWithMiles.ListMilePayments(storeCode, filterByCreatedAt, filterByStatus, sortBy);
 
 ```
 
 
-### <a name="create_refund_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController.CreateRefundPointPayment") CreateRefundPointPayment
+### <a name="create_refund_mile_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesController.CreateRefundMilePayment") CreateRefundMilePayment
 
 > This endpoint allows to refund a payment.
 
 
 ```csharp
-Task<Models.Response> CreateRefundPointPayment(
-        string accept,
-        string contentType,
-        string authorization,
-        Models.RefundPointPaymentRequest body)
+Task<Models.Response> CreateRefundMilePayment(Models.RefundMilePaymentRequest body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| authorization |  ``` Required ```  | It includes OAuth2 token. |
 | body |  ``` Required ```  | The body of the request. |
 
 
 #### Example Usage
 
 ```csharp
-string accept = "application/json";
-string contentType = "application/json";
-string authorization = "Authorization";
-var body = new Models.RefundPointPaymentRequest();
+var body = new Models.RefundMilePaymentRequest();
 
-Models.Response result = await payWithMilesPoints.CreateRefundPointPayment(accept, contentType, authorization, body);
+Models.Response result = await payWithMiles.CreateRefundMilePayment(body);
 
 ```
 
 
-### <a name="delete_cancel_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController.DeleteCancelPointPayment") DeleteCancelPointPayment
+### <a name="delete_cancel_mile_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesController.DeleteCancelMilePayment") DeleteCancelMilePayment
 
 > This endpoint allows to cancel a payment.
 
 
 ```csharp
-Task<Models.Response> DeleteCancelPointPayment(
-        string accept,
-        string contentType,
-        string authorization,
-        Models.CancelPointPaymentRequest body)
+Task<Models.Response> DeleteCancelMilePayment(Models.CancelMilePaymentRequest body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| authorization |  ``` Required ```  | It includes OAuth2 token. |
 | body |  ``` Required ```  | The body of the request. |
 
 
 #### Example Usage
 
 ```csharp
-string accept = "application/json";
-string contentType = "application/json";
-string authorization = "Authorization";
-var body = new Models.CancelPointPaymentRequest();
+var body = new Models.CancelMilePaymentRequest();
 
-Models.Response result = await payWithMilesPoints.DeleteCancelPointPayment(accept, contentType, authorization, body);
+Models.Response result = await payWithMiles.DeleteCancelMilePayment(body);
 
 ```
 
 
-### <a name="update_complete_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController.UpdateCompletePointPayment") UpdateCompletePointPayment
+### <a name="update_complete_mile_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesController.UpdateCompleteMilePayment") UpdateCompleteMilePayment
 
 > This endpoint allows to complete a payment.
 
 
 ```csharp
-Task<Models.Response> UpdateCompletePointPayment(
-        string accept,
-        string contentType,
-        string authorization,
-        Models.CompletePointPaymentRequest body)
+Task<Models.Response> UpdateCompleteMilePayment(Models.CompleteMilePaymentRequest body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| authorization |  ``` Required ```  | It includes OAuth2 token. |
 | body |  ``` Required ```  | The body of the request. |
 
 
 #### Example Usage
 
 ```csharp
-string accept = "application/json";
-string contentType = "application/json";
-string authorization = "Authorization";
-var body = new Models.CompletePointPaymentRequest();
+var body = new Models.CompleteMilePaymentRequest();
 
-Models.Response result = await payWithMilesPoints.UpdateCompletePointPayment(accept, contentType, authorization, body);
+Models.Response result = await payWithMiles.UpdateCompleteMilePayment(body);
 
 ```
 
 
-### <a name="create_start_point_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesPointsController.CreateStartPointPayment") CreateStartPointPayment
+### <a name="create_start_mile_payment"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.PayWithMilesController.CreateStartMilePayment") CreateStartMilePayment
 
-> After successful authentication and retrieving needed token,this endpoint allows to start a payment transaction. To be able to complete whole sale process successfully  also check "Complete Point Payment endpoint" please.
+> After successful authentication and retrieving needed token, this endpoint allows to start a payment transaction. To be able to complete whole payment process successfully also check "Complete Mile Payment endpoint" please.
 
 
 ```csharp
-Task<Models.StartPointPaymentResponse> CreateStartPointPayment(
-        string accept,
-        string contentType,
-        string authorization,
-        Models.StartPointPaymentRequest body)
+Task<Models.StartMilePaymentResponse> CreateStartMilePayment(Models.StartMilePaymentRequest body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| authorization |  ``` Required ```  | It includes OAuth2 token. |
 | body |  ``` Required ```  | The body of the request. |
 
 
 #### Example Usage
 
 ```csharp
-string accept = "application/json";
-string contentType = "application/json";
-string authorization = "Authorization";
-var body = new Models.StartPointPaymentRequest();
+var body = new Models.StartMilePaymentRequest();
 
-Models.StartPointPaymentResponse result = await payWithMilesPoints.CreateStartPointPayment(accept, contentType, authorization, body);
+Models.StartMilePaymentResponse result = await payWithMiles.CreateStartMilePayment(body);
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="earn_miles_points_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesEcommerceAPI.Standard.Controllers.EarnMilesPointsController") EarnMilesPointsController
+## <a name="earn_miles_controller"></a>![Class: ](https://apidocs.io/img/class.png "GlobalMilesEcommerceAPI.Standard.Controllers.EarnMilesController") EarnMilesController
 
 ### Get singleton instance
 
-The singleton instance of the ``` EarnMilesPointsController ``` class can be accessed from the API Client.
+The singleton instance of the ``` EarnMilesController ``` class can be accessed from the API Client.
 
 ```csharp
-EarnMilesPointsController earnMilesPoints = client.EarnMilesPoints;
+EarnMilesController earnMiles = client.EarnMiles;
 ```
 
-### <a name="create_order_info"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.EarnMilesPointsController.CreateOrderInfo") CreateOrderInfo
+### <a name="create_order_info"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.EarnMilesController.CreateOrderInfo") CreateOrderInfo
 
-> This endpoint allows to create an order for earn a miles / points. It may also include discounts and payments.
+> This endpoint allows to create an order for earn miles. It may also include discounts and payments.
 
 
 ```csharp
-Task<Models.OrderResponse> CreateOrderInfo(
-        string accept,
-        string contentType,
-        string authorization,
-        Models.OrderRequest body)
+Task<Models.OrderResponse> CreateOrderInfo(Models.OrderRequest body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| authorization |  ``` Required ```  | It includes OAuth2 token. |
 | body |  ``` Required ```  | The body of the request. |
 
 
 #### Example Usage
 
 ```csharp
-string accept = "application/json";
-string contentType = "application/json";
-string authorization = "Authorization";
 var body = new Models.OrderRequest();
 
-Models.OrderResponse result = await earnMilesPoints.CreateOrderInfo(accept, contentType, authorization, body);
+Models.OrderResponse result = await earnMiles.CreateOrderInfo(body);
 
 ```
 
 
-### <a name="create_cart_info"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.EarnMilesPointsController.CreateCartInfo") CreateCartInfo
+### <a name="create_cart_info"></a>![Method: ](https://apidocs.io/img/method.png "GlobalMilesEcommerceAPI.Standard.Controllers.EarnMilesController.CreateCartInfo") CreateCartInfo
 
-> This endpoint allows to get available amount of money, based on miles / points of user and their discounts which is based on cart or items.
+> This endpoint allows to get available amount of money, based on miles of user and their discounts which is based on cart or items.
 
 
 ```csharp
-Task<Models.CartResponse> CreateCartInfo(
-        string accept,
-        string contentType,
-        string authorization,
-        Models.CartRequest body)
+Task<Models.CartResponse> CreateCartInfo(Models.CartRequest body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| authorization |  ``` Required ```  | It includes OAuth2 token. |
 | body |  ``` Required ```  | The body of the request. |
 
 
 #### Example Usage
 
 ```csharp
-string accept = "application/json";
-string contentType = "application/json";
-string authorization = "Bearer {{auth_token}}";
 var body = new Models.CartRequest();
 
-Models.CartResponse result = await earnMilesPoints.CreateCartInfo(accept, contentType, authorization, body);
+Models.CartResponse result = await earnMiles.CreateCartInfo(body);
 
 ```
 
@@ -545,32 +476,22 @@ ReturnController mreturn = client.Return;
 
 
 ```csharp
-Task<Models.StartReturnResponse> CreateStartReturn(
-        string accept,
-        string contentType,
-        string authorization,
-        Models.StartReturnRequest body)
+Task<Models.StartReturnResponse> CreateStartReturn(Models.StartReturnRequest body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| authorization |  ``` Required ```  | It includes OAuth2 token. |
 | body |  ``` Required ```  | The body of the request. |
 
 
 #### Example Usage
 
 ```csharp
-string accept = "application/json";
-string contentType = "application/json";
-string authorization = "Authorization";
 var body = new Models.StartReturnRequest();
 
-Models.StartReturnResponse result = await mreturn.CreateStartReturn(accept, contentType, authorization, body);
+Models.StartReturnResponse result = await mreturn.CreateStartReturn(body);
 
 ```
 
@@ -581,32 +502,22 @@ Models.StartReturnResponse result = await mreturn.CreateStartReturn(accept, cont
 
 
 ```csharp
-Task<Models.Response> UpdateCompleteReturn(
-        string accept,
-        string contentType,
-        string authorization,
-        Models.CompleteReturnRequest body)
+Task<Models.Response> UpdateCompleteReturn(Models.CompleteReturnRequest body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| authorization |  ``` Required ```  | It includes OAuth2 token. |
 | body |  ``` Required ```  | The body of the request. |
 
 
 #### Example Usage
 
 ```csharp
-string accept = "application/json";
-string contentType = "application/json";
-string authorization = "Authorization";
 var body = new Models.CompleteReturnRequest();
 
-Models.Response result = await mreturn.UpdateCompleteReturn(accept, contentType, authorization, body);
+Models.Response result = await mreturn.UpdateCompleteReturn(body);
 
 ```
 
@@ -617,32 +528,22 @@ Models.Response result = await mreturn.UpdateCompleteReturn(accept, contentType,
 
 
 ```csharp
-Task<Models.Response> DeleteCancelReturn(
-        string accept,
-        string contentType,
-        string authorization,
-        Models.CancelReturnRequest body)
+Task<Models.Response> DeleteCancelReturn(Models.CancelReturnRequest body)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accept |  ``` Required ```  ``` DefaultValue ```  | It advertises which content type is able to understand. |
-| contentType |  ``` Required ```  ``` DefaultValue ```  | It tells the client what the content type of the returned. |
-| authorization |  ``` Required ```  | It includes OAuth2 token. |
 | body |  ``` Required ```  | The body of the request. |
 
 
 #### Example Usage
 
 ```csharp
-string accept = "application/json";
-string contentType = "application/json";
-string authorization = "Authorization";
 var body = new Models.CancelReturnRequest();
 
-Models.Response result = await mreturn.DeleteCancelReturn(accept, contentType, authorization, body);
+Models.Response result = await mreturn.DeleteCancelReturn(body);
 
 ```
 

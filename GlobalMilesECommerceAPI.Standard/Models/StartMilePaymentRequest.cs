@@ -18,14 +18,12 @@ using GlobalMilesEcommerceAPI.Standard.Utilities;
 
 namespace GlobalMilesEcommerceAPI.Standard.Models
 {
-    public class OrderRequest : BaseModel 
+    public class StartMilePaymentRequest : BaseModel 
     {
         // These fields hold the values for the public properties.
         private string storeCode;
         private string userToken;
-        private string transactionId;
-        private Models.Order order;
-        private int? shiftAllowance = 0;
+        private Models.Amount amount;
 
         /// <summary>
         /// An identifier for online store.
@@ -62,53 +60,19 @@ namespace GlobalMilesEcommerceAPI.Standard.Models
         }
 
         /// <summary>
-        /// The ID of the transaction that represents the order.
+        /// An amount of payment.
         /// </summary>
-        [JsonProperty("transaction_id")]
-        public string TransactionId 
+        [JsonProperty("amount")]
+        public Models.Amount Amount 
         { 
             get 
             {
-                return this.transactionId; 
+                return this.amount; 
             } 
             set 
             {
-                this.transactionId = value;
-                onPropertyChanged("TransactionId");
-            }
-        }
-
-        /// <summary>
-        /// A complex object for order.
-        /// </summary>
-        [JsonProperty("order")]
-        public Models.Order Order 
-        { 
-            get 
-            {
-                return this.order; 
-            } 
-            set 
-            {
-                this.order = value;
-                onPropertyChanged("Order");
-            }
-        }
-
-        /// <summary>
-        /// It specifies how many days later the miles should be given to the user.
-        /// </summary>
-        [JsonProperty("shift_allowance")]
-        public int? ShiftAllowance 
-        { 
-            get 
-            {
-                return this.shiftAllowance; 
-            } 
-            set 
-            {
-                this.shiftAllowance = value;
-                onPropertyChanged("ShiftAllowance");
+                this.amount = value;
+                onPropertyChanged("Amount");
             }
         }
     }
