@@ -14,24 +14,24 @@ namespace GlobalMilesEcommerceAPI.Standard
     {
 
         /// <summary>
-        /// Singleton access to PayWithMilesPoints controller
+        /// Singleton access to PayWithMiles controller
         /// </summary>
-        public PayWithMilesPointsController PayWithMilesPoints
+        public PayWithMilesController PayWithMiles
         {
             get
             {
-                return PayWithMilesPointsController.Instance;
+                return PayWithMilesController.Instance;
             }
         }
 
         /// <summary>
-        /// Singleton access to EarnMilesPoints controller
+        /// Singleton access to EarnMiles controller
         /// </summary>
-        public EarnMilesPointsController EarnMilesPoints
+        public EarnMilesController EarnMiles
         {
             get
             {
-                return EarnMilesPointsController.Instance;
+                return EarnMilesController.Instance;
             }
         }
 

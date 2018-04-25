@@ -23,7 +23,7 @@ namespace GlobalMilesEcommerceAPI.Standard.Models
         DIGITAL_WALLET, //Digital Wallet
         MOBILE_PAYMENT, //Mobile Payment
         GIFT_CARD, //Gitf Card
-        POINT_PAYMENT, //Pay with miles / points provided by Global Miles
+        MILE_PAYMENT, //Pay with miles provided by Global Miles
         OTHER, //Other
     }
 
@@ -33,7 +33,7 @@ namespace GlobalMilesEcommerceAPI.Standard.Models
     public static class PaymentTypeEnumHelper
     {
         //string values corresponding the enum elements
-        private static List<string> stringValues = new List<string> { "credit_card", "debit_card", "bank_transfer", "cash", "digital_wallet", "mobile_payment", "gift_card", "point_payment", "other" };
+        private static List<string> stringValues = new List<string> { "credit_card", "debit_card", "bank_transfer", "cash", "digital_wallet", "mobile_payment", "gift_card", "mile_payment", "other" };
 
         /// <summary>
         /// Converts a PaymentTypeEnum value to a corresponding string value
@@ -53,7 +53,7 @@ namespace GlobalMilesEcommerceAPI.Standard.Models
                 case PaymentTypeEnum.DIGITAL_WALLET:
                 case PaymentTypeEnum.MOBILE_PAYMENT:
                 case PaymentTypeEnum.GIFT_CARD:
-                case PaymentTypeEnum.POINT_PAYMENT:
+                case PaymentTypeEnum.MILE_PAYMENT:
                 case PaymentTypeEnum.OTHER:
                     return stringValues[(int)enumValue];
 
