@@ -1,6 +1,6 @@
 using Newtonsoft.Json.Converters;
 
-namespace GlobalMilesEcommerceAPI.Standard.Utilities
+namespace GlobalMilesECommerceAPI.Standard.Utilities
 {
     public enum ArrayDeserialization
     {

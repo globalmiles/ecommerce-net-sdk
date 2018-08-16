@@ -18,16 +18,16 @@ using GlobalMilesECommerceAPI.Standard.Utilities;
 
 namespace GlobalMilesECommerceAPI.Standard.Models
 {
-    public class StartMilePaymentResponse : Response 
+    public class RetrieveOrderResponse : Response 
     {
         // These fields hold the values for the public properties.
-        private Models.StartMilePaymentResult result;
+        private Models.BasicOrderResult result;
 
         /// <summary>
         /// Result object of the response.
         /// </summary>
         [JsonProperty("result")]
-        public Models.StartMilePaymentResult Result 
+        public Models.BasicOrderResult Result 
         { 
             get 
             {

@@ -1,16 +1,16 @@
 /*
- * GlobalMilesEcommerceAPI.Standard
+ * GlobalMilesECommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
 using System;
-using GlobalMilesEcommerceAPI.Standard;
-using GlobalMilesEcommerceAPI.Standard.Utilities;
-using GlobalMilesEcommerceAPI.Standard.Http.Client;
-using GlobalMilesEcommerceAPI.Standard.Http.Response;
-using GlobalMilesEcommerceAPI.Standard.Exceptions;
+using GlobalMilesECommerceAPI.Standard;
+using GlobalMilesECommerceAPI.Standard.Utilities;
+using GlobalMilesECommerceAPI.Standard.Http.Client;
+using GlobalMilesECommerceAPI.Standard.Http.Response;
+using GlobalMilesECommerceAPI.Standard.Exceptions;
 
-namespace GlobalMilesEcommerceAPI.Standard.Controllers
+namespace GlobalMilesECommerceAPI.Standard.Controllers
 {
     public partial class BaseController
     {

@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using GlobalMilesEcommerceAPI.Standard.Http.Request;
-using GlobalMilesEcommerceAPI.Standard.Http.Response;
+using GlobalMilesECommerceAPI.Standard.Http.Request;
+using GlobalMilesECommerceAPI.Standard.Http.Response;
 
-namespace GlobalMilesEcommerceAPI.Standard.Http.Client
+namespace GlobalMilesECommerceAPI.Standard.Http.Client
 {
 	public interface IHttpClient
     {

@@ -1,5 +1,5 @@
 /*
- * GlobalMilesEcommerceAPI.Standard
+ * GlobalMilesECommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -8,7 +8,7 @@ using System.Collections;
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace GlobalMilesEcommerceAPI.Standard.Models
+namespace GlobalMilesECommerceAPI.Standard.Models
 {
     public class StringValuedEnumConverter : JsonConverter
     {

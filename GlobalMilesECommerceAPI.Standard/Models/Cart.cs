@@ -1,5 +1,5 @@
 /*
- * GlobalMilesEcommerceAPI.Standard
+ * GlobalMilesECommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -12,37 +12,20 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using GlobalMilesEcommerceAPI.Standard;
-using GlobalMilesEcommerceAPI.Standard.Utilities;
+using GlobalMilesECommerceAPI.Standard;
+using GlobalMilesECommerceAPI.Standard.Utilities;
 
 
-namespace GlobalMilesEcommerceAPI.Standard.Models
+namespace GlobalMilesECommerceAPI.Standard.Models
 {
     public class Cart : BaseModel 
     {
         // These fields hold the values for the public properties.
-        private string currency;
         private double subtotal;
         private double tax;
         private double total;
+        private string currency;
         private List<Models.CartItem> items;
-
-        /// <summary>
-        /// ISO-4217 3-letter currency code.
-        /// </summary>
-        [JsonProperty("currency")]
-        public string Currency 
-        { 
-            get 
-            {
-                return this.currency; 
-            } 
-            set 
-            {
-                this.currency = value;
-                onPropertyChanged("Currency");
-            }
-        }
 
         /// <summary>
         /// Total value of all cart items without tax.
@@ -92,6 +75,23 @@ namespace GlobalMilesEcommerceAPI.Standard.Models
             {
                 this.total = value;
                 onPropertyChanged("Total");
+            }
+        }
+
+        /// <summary>
+        /// ISO-4217 3-letter currency code.
+        /// </summary>
+        [JsonProperty("currency")]
+        public string Currency 
+        { 
+            get 
+            {
+                return this.currency; 
+            } 
+            set 
+            {
+                this.currency = value;
+                onPropertyChanged("Currency");
             }
         }
 

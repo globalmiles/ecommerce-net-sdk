@@ -1,5 +1,5 @@
 /*
- * GlobalMilesEcommerceAPI.Standard
+ * GlobalMilesECommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -12,14 +12,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Converters;
-using GlobalMilesEcommerceAPI.Standard;
-using GlobalMilesEcommerceAPI.Standard.Utilities;
-using GlobalMilesEcommerceAPI.Standard.Http.Request;
-using GlobalMilesEcommerceAPI.Standard.Http.Response;
-using GlobalMilesEcommerceAPI.Standard.Http.Client;
-using GlobalMilesEcommerceAPI.Standard.Exceptions;
+using GlobalMilesECommerceAPI.Standard;
+using GlobalMilesECommerceAPI.Standard.Utilities;
+using GlobalMilesECommerceAPI.Standard.Http.Request;
+using GlobalMilesECommerceAPI.Standard.Http.Response;
+using GlobalMilesECommerceAPI.Standard.Http.Client;
+using GlobalMilesECommerceAPI.Standard.Exceptions;
 
-namespace GlobalMilesEcommerceAPI.Standard.Controllers
+namespace GlobalMilesECommerceAPI.Standard.Controllers
 {
     public partial class OAuthAuthorizationController: BaseController
     {

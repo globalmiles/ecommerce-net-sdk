@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace GlobalMilesEcommerceAPI.Standard.Http.Client
+namespace GlobalMilesECommerceAPI.Standard.Http.Client
 {
     /// <summary>
     /// An DTO class to capture information for file uploads

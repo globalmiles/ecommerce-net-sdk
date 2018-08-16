@@ -1,14 +1,14 @@
 /*
- * GlobalMilesEcommerceAPI.Standard
+ * GlobalMilesECommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
 using System;
 using System.IO;
 using Newtonsoft.Json;
-using GlobalMilesEcommerceAPI.Standard.Http.Client;
+using GlobalMilesECommerceAPI.Standard.Http.Client;
 
-namespace GlobalMilesEcommerceAPI.Standard.Exceptions
+namespace GlobalMilesECommerceAPI.Standard.Exceptions
 {
     [JsonObject]
     public class APIException : Exception
