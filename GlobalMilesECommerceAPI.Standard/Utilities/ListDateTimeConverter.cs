@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace GlobalMilesEcommerceAPI.Standard.Utilities
+namespace GlobalMilesECommerceAPI.Standard.Utilities
 {
     class ListDateTimeConverter : JsonConverter
     {

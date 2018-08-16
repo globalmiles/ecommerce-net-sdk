@@ -18,34 +18,53 @@ using GlobalMilesECommerceAPI.Standard.Utilities;
 
 namespace GlobalMilesECommerceAPI.Standard.Models
 {
-    public class Payment : BaseModel 
+    public class Return : BaseModel 
     {
         // These fields hold the values for the public properties.
-        private string paymentProvisionToken;
+        private string returnProvisionToken;
+        private string transactionId;
         private string createdAt;
         private string updatedAt;
-        private Models.PaymentStatusEnum status;
+        private Models.ReturnStatusEnum status;
         private Models.Amount amount;
+        private Models.Amount residual;
 
         /// <summary>
-        /// A token represents a payment object for provisioning.
+        /// The token value of a return.
         /// </summary>
-        [JsonProperty("payment_provision_token")]
-        public string PaymentProvisionToken 
+        [JsonProperty("return_provision_token")]
+        public string ReturnProvisionToken 
         { 
             get 
             {
-                return this.paymentProvisionToken; 
+                return this.returnProvisionToken; 
             } 
             set 
             {
-                this.paymentProvisionToken = value;
-                onPropertyChanged("PaymentProvisionToken");
+                this.returnProvisionToken = value;
+                onPropertyChanged("ReturnProvisionToken");
             }
         }
 
         /// <summary>
-        /// Create date time of payment. The format is ISO 8601 date and time.
+        /// The ID of the transaction that represents the order.
+        /// </summary>
+        [JsonProperty("transaction_id")]
+        public string TransactionId 
+        { 
+            get 
+            {
+                return this.transactionId; 
+            } 
+            set 
+            {
+                this.transactionId = value;
+                onPropertyChanged("TransactionId");
+            }
+        }
+
+        /// <summary>
+        /// Create date time of return. The format is ISO 8601 date and time.
         /// </summary>
         [JsonProperty("created_at")]
         public string CreatedAt 
@@ -62,7 +81,7 @@ namespace GlobalMilesECommerceAPI.Standard.Models
         }
 
         /// <summary>
-        /// Last update date time of payment. The format is ISO 8601 date and time.
+        /// Last update date time of return. The format is ISO 8601 date and time.
         /// </summary>
         [JsonProperty("updated_at")]
         public string UpdatedAt 
@@ -79,10 +98,10 @@ namespace GlobalMilesECommerceAPI.Standard.Models
         }
 
         /// <summary>
-        /// The status of payment.
+        /// The status of return.
         /// </summary>
         [JsonProperty("status", ItemConverterType = typeof(StringValuedEnumConverter))]
-        public Models.PaymentStatusEnum Status 
+        public Models.ReturnStatusEnum Status 
         { 
             get 
             {
@@ -96,7 +115,7 @@ namespace GlobalMilesECommerceAPI.Standard.Models
         }
 
         /// <summary>
-        /// An amount of payment.
+        /// An amount of return.
         /// </summary>
         [JsonProperty("amount")]
         public Models.Amount Amount 
@@ -109,6 +128,23 @@ namespace GlobalMilesECommerceAPI.Standard.Models
             {
                 this.amount = value;
                 onPropertyChanged("Amount");
+            }
+        }
+
+        /// <summary>
+        /// A residual amount of return.
+        /// </summary>
+        [JsonProperty("residual")]
+        public Models.Amount Residual 
+        { 
+            get 
+            {
+                return this.residual; 
+            } 
+            set 
+            {
+                this.residual = value;
+                onPropertyChanged("Residual");
             }
         }
     }

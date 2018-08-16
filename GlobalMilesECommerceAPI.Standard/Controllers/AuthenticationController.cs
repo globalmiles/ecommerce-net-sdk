@@ -1,5 +1,5 @@
 /*
- * GlobalMilesEcommerceAPI.Standard
+ * GlobalMilesECommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -12,14 +12,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Converters;
-using GlobalMilesEcommerceAPI.Standard;
-using GlobalMilesEcommerceAPI.Standard.Utilities;
-using GlobalMilesEcommerceAPI.Standard.Http.Request;
-using GlobalMilesEcommerceAPI.Standard.Http.Response;
-using GlobalMilesEcommerceAPI.Standard.Http.Client;
-using GlobalMilesEcommerceAPI.Standard.Exceptions;
+using GlobalMilesECommerceAPI.Standard;
+using GlobalMilesECommerceAPI.Standard.Utilities;
+using GlobalMilesECommerceAPI.Standard.Http.Request;
+using GlobalMilesECommerceAPI.Standard.Http.Response;
+using GlobalMilesECommerceAPI.Standard.Http.Client;
+using GlobalMilesECommerceAPI.Standard.Exceptions;
 
-namespace GlobalMilesEcommerceAPI.Standard.Controllers
+namespace GlobalMilesECommerceAPI.Standard.Controllers
 {
     public partial class AuthenticationController: BaseController
     {
@@ -50,7 +50,8 @@ namespace GlobalMilesEcommerceAPI.Standard.Controllers
         #endregion Singleton Pattern
 
         /// <summary>
-        /// An access token will allow you to make requests for the system. We support only one type of token: client_credentials
+        /// An access token will allow you to make requests for the system. We support only one type of token: client_credentials.
+        /// You can try this API with configuring client parameters in Console Tab below. Test OAuthClientId is b30359c21700fd6f2b91154adcb7b37bab3e7e0a33e22682e5dd149d7a6ac4df and OAuthClientSecret is 4bc4335faad41d6a23cd059e495005f00496a64e34e6187b1d72695a8debd28c
         /// </summary>
         /// <param name="accept">Required parameter: It advertises which content type is able to understand.</param>
         /// <param name="contentType">Required parameter: It tells the client what the content type of the returned.</param>
@@ -64,7 +65,8 @@ namespace GlobalMilesEcommerceAPI.Standard.Controllers
         }
 
         /// <summary>
-        /// An access token will allow you to make requests for the system. We support only one type of token: client_credentials
+        /// An access token will allow you to make requests for the system. We support only one type of token: client_credentials.
+        /// You can try this API with configuring client parameters in Console Tab below. Test OAuthClientId is b30359c21700fd6f2b91154adcb7b37bab3e7e0a33e22682e5dd149d7a6ac4df and OAuthClientSecret is 4bc4335faad41d6a23cd059e495005f00496a64e34e6187b1d72695a8debd28c
         /// </summary>
         /// <param name="accept">Required parameter: It advertises which content type is able to understand.</param>
         /// <param name="contentType">Required parameter: It tells the client what the content type of the returned.</param>

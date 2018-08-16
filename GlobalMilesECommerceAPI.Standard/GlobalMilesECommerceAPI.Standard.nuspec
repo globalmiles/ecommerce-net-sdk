@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-GlobalMilesEcommerceAPI.Standard
+GlobalMilesECommerceAPI.Standard
 This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
 -->
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
-    <id>GlobalMilesEcommerceAPI.Standard</id>
-    <version>2.0.0</version>
-    <title>GlobalMilesEcommerceAPI.Standard</title>
+    <id>GlobalMilesECommerceAPI.Standard</id>
+    <version>2.1.0</version>
+    <title>GlobalMilesECommerceAPI.Standard</title>
     <authors>APIMATIC 2.0</authors>
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>API for Ecommerce Partners. This document includes Cart, Discount, Payment, Order and Return related endpoints provided by Global Miles.</description>
+    <description>API for E-commerce Partners. This document includes Cart, Discount, Payment, Order and Return related endpoints provided by Global Miles.</description>
     <summary />
     <releaseNotes />
     <copyright>Copyright 2016</copyright>
@@ -20,6 +20,6 @@ This file was automatically generated for Global Miles by APIMATIC v2.0 ( https:
         </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\GlobalMilesEcommerceAPI.Standard.dll" target="lib\GlobalMilesEcommerceAPI.Standard.dll" />
+    <file src="bin\Release\GlobalMilesECommerceAPI.Standard.dll" target="lib\GlobalMilesECommerceAPI.Standard.dll" />
   </files>
 </package>

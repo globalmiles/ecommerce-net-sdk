@@ -14,39 +14,35 @@ using GlobalMilesECommerceAPI.Standard.Utilities;
 namespace GlobalMilesECommerceAPI.Standard.Models
 {
     [JsonConverter(typeof(StringValuedEnumConverter))]
-    public enum PaymentStatusEnum
+    public enum ReturnStatusEnum
     {
         STARTED, //Started
-        COMPLETED, //Completed
         CANCELLED, //Cancelled
-        REFUNDED, //Refunded
-        USED, //Used
+        COMPLETED, //Completed
     }
 
     /// <summary>
-    /// Helper for the enum type PaymentStatusEnum
+    /// Helper for the enum type ReturnStatusEnum
     /// </summary>
-    public static class PaymentStatusEnumHelper
+    public static class ReturnStatusEnumHelper
     {
         //string values corresponding the enum elements
-        private static List<string> stringValues = new List<string> { "started", "completed", "cancelled", "refunded", "used" };
+        private static List<string> stringValues = new List<string> { "started", "cancelled", "completed" };
 
         /// <summary>
-        /// Converts a PaymentStatusEnum value to a corresponding string value
+        /// Converts a ReturnStatusEnum value to a corresponding string value
         /// </summary>
-        /// <param name="enumValue">The PaymentStatusEnum value to convert</param>
+        /// <param name="enumValue">The ReturnStatusEnum value to convert</param>
         /// <returns>The representative string value</returns>
-        public static string ToValue(PaymentStatusEnum enumValue)
+        public static string ToValue(ReturnStatusEnum enumValue)
         {
             switch(enumValue)
             {
                 //only valid enum elements can be used
                 //this is necessary to avoid errors
-                case PaymentStatusEnum.STARTED:
-                case PaymentStatusEnum.COMPLETED:
-                case PaymentStatusEnum.CANCELLED:
-                case PaymentStatusEnum.REFUNDED:
-                case PaymentStatusEnum.USED:
+                case ReturnStatusEnum.STARTED:
+                case ReturnStatusEnum.CANCELLED:
+                case ReturnStatusEnum.COMPLETED:
                     return stringValues[(int)enumValue];
 
                 //an invalid enum value was requested
@@ -56,11 +52,11 @@ namespace GlobalMilesECommerceAPI.Standard.Models
         }
 
         /// <summary>
-        /// Convert a list of PaymentStatusEnum values to a list of strings
+        /// Convert a list of ReturnStatusEnum values to a list of strings
         /// </summary>
-        /// <param name="enumValues">The list of PaymentStatusEnum values to convert</param>
+        /// <param name="enumValues">The list of ReturnStatusEnum values to convert</param>
         /// <returns>The list of representative string values</returns>
-        public static List<string> ToValue(List<PaymentStatusEnum> enumValues)
+        public static List<string> ToValue(List<ReturnStatusEnum> enumValues)
         {
             if (null == enumValues)
                 return null;
@@ -69,17 +65,17 @@ namespace GlobalMilesECommerceAPI.Standard.Models
         }
 
         /// <summary>
-        /// Converts a string value into PaymentStatusEnum value
+        /// Converts a string value into ReturnStatusEnum value
         /// </summary>
         /// <param name="value">The string value to parse</param>
-        /// <returns>The parsed PaymentStatusEnum value</returns>
-        public static PaymentStatusEnum ParseString(string value)
+        /// <returns>The parsed ReturnStatusEnum value</returns>
+        public static ReturnStatusEnum ParseString(string value)
         {
             int index = stringValues.IndexOf(value);
             if(index < 0)
-                throw new InvalidCastException(string.Format("Unable to cast value: {0} to type PaymentStatusEnum", value));
+                throw new InvalidCastException(string.Format("Unable to cast value: {0} to type ReturnStatusEnum", value));
 
-            return (PaymentStatusEnum) index;
+            return (ReturnStatusEnum) index;
         }
     }
 } 

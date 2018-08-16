@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using GlobalMilesEcommerceAPI.Standard.Http.Request;
-using GlobalMilesEcommerceAPI.Standard.Http.Response;
-using GlobalMilesEcommerceAPI.Standard.Utilities;
+using GlobalMilesECommerceAPI.Standard.Http.Request;
+using GlobalMilesECommerceAPI.Standard.Http.Response;
+using GlobalMilesECommerceAPI.Standard.Utilities;
 
-namespace GlobalMilesEcommerceAPI.Standard.Http.Client
+namespace GlobalMilesECommerceAPI.Standard.Http.Client
 {
     public class HTTPClient : IHttpClient
     {

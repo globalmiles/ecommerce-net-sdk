@@ -1,5 +1,5 @@
 /*
- * GlobalMilesEcommerceAPI.Standard
+ * GlobalMilesECommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -12,20 +12,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using GlobalMilesEcommerceAPI.Standard;
-using GlobalMilesEcommerceAPI.Standard.Utilities;
+using GlobalMilesECommerceAPI.Standard;
+using GlobalMilesECommerceAPI.Standard.Utilities;
 
 
-namespace GlobalMilesEcommerceAPI.Standard.Models
+namespace GlobalMilesECommerceAPI.Standard.Models
 {
     public class OrderRequest : BaseModel 
     {
         // These fields hold the values for the public properties.
         private string storeCode;
         private string userToken;
-        private string transactionId;
         private Models.Order order;
-        private int? shiftAllowance = 0;
 
         /// <summary>
         /// An identifier for online store.
@@ -62,23 +60,6 @@ namespace GlobalMilesEcommerceAPI.Standard.Models
         }
 
         /// <summary>
-        /// The ID of the transaction that represents the order.
-        /// </summary>
-        [JsonProperty("transaction_id")]
-        public string TransactionId 
-        { 
-            get 
-            {
-                return this.transactionId; 
-            } 
-            set 
-            {
-                this.transactionId = value;
-                onPropertyChanged("TransactionId");
-            }
-        }
-
-        /// <summary>
         /// A complex object for order.
         /// </summary>
         [JsonProperty("order")]
@@ -92,23 +73,6 @@ namespace GlobalMilesEcommerceAPI.Standard.Models
             {
                 this.order = value;
                 onPropertyChanged("Order");
-            }
-        }
-
-        /// <summary>
-        /// It specifies how many days later the miles should be given to the user.
-        /// </summary>
-        [JsonProperty("shift_allowance")]
-        public int? ShiftAllowance 
-        { 
-            get 
-            {
-                return this.shiftAllowance; 
-            } 
-            set 
-            {
-                this.shiftAllowance = value;
-                onPropertyChanged("ShiftAllowance");
             }
         }
     }

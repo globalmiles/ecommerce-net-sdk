@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Text;
-using GlobalMilesEcommerceAPI.Standard.Utilities;
-using GlobalMilesEcommerceAPI.Standard.Models;
-namespace GlobalMilesEcommerceAPI.Standard
+using GlobalMilesECommerceAPI.Standard.Utilities;
+using GlobalMilesECommerceAPI.Standard.Models;
+namespace GlobalMilesECommerceAPI.Standard
 {
     public partial class Configuration
     {
@@ -19,7 +19,7 @@ namespace GlobalMilesEcommerceAPI.Standard
         }
         public enum Servers
         {
-            DEFAULT,
+            ENUM_DEFAULT,
         }
 
         //The current environment being used
@@ -40,7 +40,7 @@ namespace GlobalMilesEcommerceAPI.Standard
                 { 
                     Environments.CLOUD,new Dictionary<Servers, string>
                     {
-                        { Servers.DEFAULT,"https://test1.api.globalmiles.com" },
+                        { Servers.ENUM_DEFAULT,"https://api.sandbox.globalmiles.com" },
                     }
                 },
             };
@@ -62,7 +62,7 @@ namespace GlobalMilesEcommerceAPI.Standard
         /// </summary>
         /// <param name="alias">Default value:DEFAULT</param>
         /// <return>Returns the baseurl</return>
-        internal static string GetBaseURI(Servers alias = Servers.DEFAULT)
+        internal static string GetBaseURI(Servers alias = Servers.ENUM_DEFAULT)
         {
             StringBuilder Url =  new StringBuilder(EnvironmentsMap[Environment][alias]);
             APIHelper.AppendUrlWithTemplateParameters(Url, GetBaseURIParameters());

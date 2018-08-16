@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- - GlobalMilesEcommerceAPI.Standard
+ - GlobalMilesECommerceAPI.Standard
  -
  - This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
 -->
@@ -8,14 +8,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
-    <AssemblyName>GlobalMilesEcommerceAPI.Standard</AssemblyName>
-    <Version>2.0.0.0</Version>
+    <AssemblyName>GlobalMilesECommerceAPI.Standard</AssemblyName>
+    <Version>2.1.0.0</Version>
     <Authors></Authors>
     <Company></Company>
-    <Product>GlobalMilesEcommerceAPI.Standard</Product>
+    <Product>GlobalMilesECommerceAPI.Standard</Product>
     <Copyright>Copyright ©  2017</Copyright>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <FileVersion>2.0.0.0</FileVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <FileVersion>2.1.0.0</FileVersion>
     <Description>Automatically generated using APIMatic.</Description>
   </PropertyGroup>
 

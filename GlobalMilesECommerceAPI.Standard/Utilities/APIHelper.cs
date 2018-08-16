@@ -1,5 +1,5 @@
 /*
- * GlobalMilesEcommerceAPI.Standard
+ * GlobalMilesECommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -17,7 +17,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 
-namespace GlobalMilesEcommerceAPI.Standard.Utilities
+namespace GlobalMilesECommerceAPI.Standard.Utilities
 {
     public static class APIHelper
     {

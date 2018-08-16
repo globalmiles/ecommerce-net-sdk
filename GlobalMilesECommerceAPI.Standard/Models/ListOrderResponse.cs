@@ -1,5 +1,5 @@
 /*
- * GlobalMilesEcommerceAPI.Standard
+ * GlobalMilesECommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
@@ -12,22 +12,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using GlobalMilesEcommerceAPI.Standard;
-using GlobalMilesEcommerceAPI.Standard.Utilities;
+using GlobalMilesECommerceAPI.Standard;
+using GlobalMilesECommerceAPI.Standard.Utilities;
 
 
-namespace GlobalMilesEcommerceAPI.Standard.Models
+namespace GlobalMilesECommerceAPI.Standard.Models
 {
-    public class ListPointPaymentResponse : Response 
+    public class ListOrderResponse : Response 
     {
         // These fields hold the values for the public properties.
-        private List<Models.Payment> result;
+        private List<Models.BasicOrderResult> result;
 
         /// <summary>
         /// Result object of the response.
         /// </summary>
         [JsonProperty("result")]
-        public List<Models.Payment> Result 
+        public List<Models.BasicOrderResult> Result 
         { 
             get 
             {

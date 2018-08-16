@@ -18,18 +18,36 @@ using GlobalMilesECommerceAPI.Standard.Utilities;
 
 namespace GlobalMilesECommerceAPI.Standard.Models
 {
-    public class Order : BaseModel 
+    public class BasicOrderResult : BaseModel 
     {
         // These fields hold the values for the public properties.
+        private string transactionToken;
         private string transactionId;
         private string completedAt;
+        private string createdAt;
+        private string updatedAt;
+        private Models.OrderStatusEnum status;
         private double subtotal;
         private double tax;
         private double total;
         private string currency;
-        private List<Models.OrderItem> items;
-        private List<Models.DiscountItem> discounts;
-        private List<Models.PaymentItem> payments;
+
+        /// <summary>
+        /// A token represents an order object from Global Miles system.
+        /// </summary>
+        [JsonProperty("transaction_token")]
+        public string TransactionToken 
+        { 
+            get 
+            {
+                return this.transactionToken; 
+            } 
+            set 
+            {
+                this.transactionToken = value;
+                onPropertyChanged("TransactionToken");
+            }
+        }
 
         /// <summary>
         /// The ID of the transaction that represents the order.
@@ -62,6 +80,57 @@ namespace GlobalMilesECommerceAPI.Standard.Models
             {
                 this.completedAt = value;
                 onPropertyChanged("CompletedAt");
+            }
+        }
+
+        /// <summary>
+        /// Create date time of order. The format is ISO 8601 date and time.
+        /// </summary>
+        [JsonProperty("created_at")]
+        public string CreatedAt 
+        { 
+            get 
+            {
+                return this.createdAt; 
+            } 
+            set 
+            {
+                this.createdAt = value;
+                onPropertyChanged("CreatedAt");
+            }
+        }
+
+        /// <summary>
+        /// Last update date time of order. The format is ISO 8601 date and time.
+        /// </summary>
+        [JsonProperty("updated_at")]
+        public string UpdatedAt 
+        { 
+            get 
+            {
+                return this.updatedAt; 
+            } 
+            set 
+            {
+                this.updatedAt = value;
+                onPropertyChanged("UpdatedAt");
+            }
+        }
+
+        /// <summary>
+        /// The status of order.
+        /// </summary>
+        [JsonProperty("status", ItemConverterType = typeof(StringValuedEnumConverter))]
+        public Models.OrderStatusEnum Status 
+        { 
+            get 
+            {
+                return this.status; 
+            } 
+            set 
+            {
+                this.status = value;
+                onPropertyChanged("Status");
             }
         }
 
@@ -130,57 +199,6 @@ namespace GlobalMilesECommerceAPI.Standard.Models
             {
                 this.currency = value;
                 onPropertyChanged("Currency");
-            }
-        }
-
-        /// <summary>
-        /// An array of order items.
-        /// </summary>
-        [JsonProperty("items")]
-        public List<Models.OrderItem> Items 
-        { 
-            get 
-            {
-                return this.items; 
-            } 
-            set 
-            {
-                this.items = value;
-                onPropertyChanged("Items");
-            }
-        }
-
-        /// <summary>
-        /// An array of discount items.
-        /// </summary>
-        [JsonProperty("discounts")]
-        public List<Models.DiscountItem> Discounts 
-        { 
-            get 
-            {
-                return this.discounts; 
-            } 
-            set 
-            {
-                this.discounts = value;
-                onPropertyChanged("Discounts");
-            }
-        }
-
-        /// <summary>
-        /// An array of payment items.
-        /// </summary>
-        [JsonProperty("payments")]
-        public List<Models.PaymentItem> Payments 
-        { 
-            get 
-            {
-                return this.payments; 
-            } 
-            set 
-            {
-                this.payments = value;
-                onPropertyChanged("Payments");
             }
         }
     }

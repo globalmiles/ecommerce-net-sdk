@@ -1,28 +1,17 @@
 /*
- * GlobalMilesEcommerceAPI.Standard
+ * GlobalMilesECommerceAPI.Standard
  *
  * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
  */
 using System;
-using GlobalMilesEcommerceAPI.Standard.Controllers;
-using GlobalMilesEcommerceAPI.Standard.Http.Client;
-using GlobalMilesEcommerceAPI.Standard.Utilities;
+using GlobalMilesECommerceAPI.Standard.Controllers;
+using GlobalMilesECommerceAPI.Standard.Http.Client;
+using GlobalMilesECommerceAPI.Standard.Utilities;
 
-namespace GlobalMilesEcommerceAPI.Standard
+namespace GlobalMilesECommerceAPI.Standard
 {
-    public partial class GlobalMilesEcommerceAPIClient
+    public partial class GlobalMilesECommerceAPIClient
     {
-
-        /// <summary>
-        /// Singleton access to PayWithMiles controller
-        /// </summary>
-        public PayWithMilesController PayWithMiles
-        {
-            get
-            {
-                return PayWithMilesController.Instance;
-            }
-        }
 
         /// <summary>
         /// Singleton access to EarnMiles controller
@@ -54,6 +43,17 @@ namespace GlobalMilesEcommerceAPI.Standard
             get
             {
                 return ReturnController.Instance;
+            }
+        }
+
+        /// <summary>
+        /// Singleton access to PayWithMiles controller
+        /// </summary>
+        public PayWithMilesController PayWithMiles
+        {
+            get
+            {
+                return PayWithMilesController.Instance;
             }
         }
 
@@ -93,12 +93,12 @@ namespace GlobalMilesEcommerceAPI.Standard
         /// <summary>
         /// Default constructor
         /// </summary>
-        public GlobalMilesEcommerceAPIClient() { }
+        public GlobalMilesECommerceAPIClient() { }
 
         /// <summary>
         /// Client initialization constructor
         /// </summary>
-        public GlobalMilesEcommerceAPIClient(string oAuthClientId, string oAuthClientSecret)
+        public GlobalMilesECommerceAPIClient(string oAuthClientId, string oAuthClientSecret)
         {
             Configuration.OAuthClientId = oAuthClientId;
             Configuration.OAuthClientSecret = oAuthClientSecret;

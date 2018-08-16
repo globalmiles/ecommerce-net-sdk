@@ -14,39 +14,37 @@ using GlobalMilesECommerceAPI.Standard.Utilities;
 namespace GlobalMilesECommerceAPI.Standard.Models
 {
     [JsonConverter(typeof(StringValuedEnumConverter))]
-    public enum PaymentStatusEnum
+    public enum OrderStatusEnum
     {
-        STARTED, //Started
-        COMPLETED, //Completed
-        CANCELLED, //Cancelled
+        PENDING, //Pending
         REFUNDED, //Refunded
-        USED, //Used
+        PROCESSED, //Processed
+        PARTIALLY_REFUNDED, //Partially Refunded
     }
 
     /// <summary>
-    /// Helper for the enum type PaymentStatusEnum
+    /// Helper for the enum type OrderStatusEnum
     /// </summary>
-    public static class PaymentStatusEnumHelper
+    public static class OrderStatusEnumHelper
     {
         //string values corresponding the enum elements
-        private static List<string> stringValues = new List<string> { "started", "completed", "cancelled", "refunded", "used" };
+        private static List<string> stringValues = new List<string> { "pending", "refunded", "processed", "partially_refunded" };
 
         /// <summary>
-        /// Converts a PaymentStatusEnum value to a corresponding string value
+        /// Converts a OrderStatusEnum value to a corresponding string value
         /// </summary>
-        /// <param name="enumValue">The PaymentStatusEnum value to convert</param>
+        /// <param name="enumValue">The OrderStatusEnum value to convert</param>
         /// <returns>The representative string value</returns>
-        public static string ToValue(PaymentStatusEnum enumValue)
+        public static string ToValue(OrderStatusEnum enumValue)
         {
             switch(enumValue)
             {
                 //only valid enum elements can be used
                 //this is necessary to avoid errors
-                case PaymentStatusEnum.STARTED:
-                case PaymentStatusEnum.COMPLETED:
-                case PaymentStatusEnum.CANCELLED:
-                case PaymentStatusEnum.REFUNDED:
-                case PaymentStatusEnum.USED:
+                case OrderStatusEnum.PENDING:
+                case OrderStatusEnum.REFUNDED:
+                case OrderStatusEnum.PROCESSED:
+                case OrderStatusEnum.PARTIALLY_REFUNDED:
                     return stringValues[(int)enumValue];
 
                 //an invalid enum value was requested
@@ -56,11 +54,11 @@ namespace GlobalMilesECommerceAPI.Standard.Models
         }
 
         /// <summary>
-        /// Convert a list of PaymentStatusEnum values to a list of strings
+        /// Convert a list of OrderStatusEnum values to a list of strings
         /// </summary>
-        /// <param name="enumValues">The list of PaymentStatusEnum values to convert</param>
+        /// <param name="enumValues">The list of OrderStatusEnum values to convert</param>
         /// <returns>The list of representative string values</returns>
-        public static List<string> ToValue(List<PaymentStatusEnum> enumValues)
+        public static List<string> ToValue(List<OrderStatusEnum> enumValues)
         {
             if (null == enumValues)
                 return null;
@@ -69,17 +67,17 @@ namespace GlobalMilesECommerceAPI.Standard.Models
         }
 
         /// <summary>
-        /// Converts a string value into PaymentStatusEnum value
+        /// Converts a string value into OrderStatusEnum value
         /// </summary>
         /// <param name="value">The string value to parse</param>
-        /// <returns>The parsed PaymentStatusEnum value</returns>
-        public static PaymentStatusEnum ParseString(string value)
+        /// <returns>The parsed OrderStatusEnum value</returns>
+        public static OrderStatusEnum ParseString(string value)
         {
             int index = stringValues.IndexOf(value);
             if(index < 0)
-                throw new InvalidCastException(string.Format("Unable to cast value: {0} to type PaymentStatusEnum", value));
+                throw new InvalidCastException(string.Format("Unable to cast value: {0} to type OrderStatusEnum", value));
 
-            return (PaymentStatusEnum) index;
+            return (OrderStatusEnum) index;
         }
     }
 } 

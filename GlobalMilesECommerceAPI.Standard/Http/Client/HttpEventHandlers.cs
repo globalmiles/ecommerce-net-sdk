@@ -1,7 +1,7 @@
-using GlobalMilesEcommerceAPI.Standard.Http.Request;
-using GlobalMilesEcommerceAPI.Standard.Http.Response;
+using GlobalMilesECommerceAPI.Standard.Http.Request;
+using GlobalMilesECommerceAPI.Standard.Http.Response;
 
-namespace GlobalMilesEcommerceAPI.Standard.Http.Client
+namespace GlobalMilesECommerceAPI.Standard.Http.Client
 {
     /// <summary>
     /// Delegate to handle the event on before http request. This event is raised before any
