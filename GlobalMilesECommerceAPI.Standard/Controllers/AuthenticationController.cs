@@ -1,7 +1,7 @@
 /*
  * GlobalMilesECommerceAPI.Standard
  *
- * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
+ * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io ).
  */
 using System;
 using System.Collections.Generic;
@@ -90,7 +90,6 @@ namespace GlobalMilesECommerceAPI.Standard.Controllers
             {
                 { "user-agent", "APIMATIC 2.0" },
                 { "accept", "application/json" },
-                { "content-type", "application/json; charset=utf-8" },
                 { "Accept", accept },
                 { "Content-Type", contentType }
             };
