@@ -1,7 +1,7 @@
 /*
  * GlobalMilesECommerceAPI.Standard
  *
- * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io )
+ * This file was automatically generated for Global Miles by APIMATIC v2.0 ( https://apimatic.io ).
  */
 using System;
 using GlobalMilesECommerceAPI.Standard.Controllers;

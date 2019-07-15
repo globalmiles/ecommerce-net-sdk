@@ -66,8 +66,11 @@ namespace GlobalMilesECommerceAPI.Standard.Utilities
 
         public void CheckAuthorization()
         {
-            if (Configuration.OAuthToken == null)
+            if (Configuration.OAuthToken == null || Configuration.OAuthToken.Expiry <=
+                (long) DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds)
+            {
                 Authorize();
+            }
         } 
     }
 }

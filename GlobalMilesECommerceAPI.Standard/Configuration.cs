@@ -6,6 +6,7 @@ namespace GlobalMilesECommerceAPI.Standard
 {
     public partial class Configuration
     {
+
         public delegate void OAuthTokenUpdateDelegate(OAuthToken token);
 
         public static OAuthToken OAuthToken;
@@ -27,11 +28,11 @@ namespace GlobalMilesECommerceAPI.Standard
 
         //OAuth 2 Client ID
         //TODO: Replace the OAuthClientId with an appropriate value
-        public static string OAuthClientId = "TODO: Replace";
+        public static string OAuthClientId = "";
 
         //OAuth 2 Client Secret
         //TODO: Replace the OAuthClientSecret with an appropriate value
-        public static string OAuthClientSecret = "TODO: Replace";
+        public static string OAuthClientSecret = "";
 
         //A map of environments and their corresponding servers/baseurls
         public static Dictionary<Environments, Dictionary<Servers, string>> EnvironmentsMap =

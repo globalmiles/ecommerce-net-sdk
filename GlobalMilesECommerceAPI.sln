@@ -1,9 +1,8 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalMilesECommerceAPI.Standard", "GlobalMilesECommerceAPI.Standard/GlobalMilesECommerceAPI.Standard.csproj", "{1d99a471-c16e-4ae3-9f30-73e847a55b0e}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalMilesECommerceAPI.Standard", "GlobalMilesECommerceAPI.Standard/GlobalMilesECommerceAPI.Standard.csproj", "{bd3771e2-acb7-407c-8e3e-ac1574335a22}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +10,10 @@ Global
         Release|Any CPU = Release|Any CPU
     EndGlobalSection
     GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {1d99a471-c16e-4ae3-9f30-73e847a55b0e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {1d99a471-c16e-4ae3-9f30-73e847a55b0e}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {1d99a471-c16e-4ae3-9f30-73e847a55b0e}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {1d99a471-c16e-4ae3-9f30-73e847a55b0e}.Release|Any CPU.Build.0 = Release|Any CPU
+        {bd3771e2-acb7-407c-8e3e-ac1574335a22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {bd3771e2-acb7-407c-8e3e-ac1574335a22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {bd3771e2-acb7-407c-8e3e-ac1574335a22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {bd3771e2-acb7-407c-8e3e-ac1574335a22}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
     GlobalSection(SolutionProperties) = preSolution
         HideSolutionNode = FALSE
